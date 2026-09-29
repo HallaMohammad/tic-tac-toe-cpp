@@ -1,0 +1,13 @@
+name: Build and Run 
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: |
+          cmake -B build
+          cmake --build build
+      - name: Run the game (x wins)
+        run: printf "1\n4\n2\n5\n3\n" | ./build/app
