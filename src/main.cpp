@@ -61,4 +61,4 @@ player = (player == 'X') ? 'O' :'X';
     std::cin >> again;
   }
 }
-}
+
