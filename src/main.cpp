@@ -32,8 +32,10 @@ return true;
 }
 };
 int main() {
-  Board board;
-char player = 'X';
+char again ='y';
+  while (again == 'y' || again == 'Y') {
+    Board board;
+    char player = 'X';
 while (true) {
 board.print();
 std::cout << "Player " << player << " (1-9): ";
@@ -54,5 +56,9 @@ std::cout << "Draw!\n";
 break;
 }
 player = (player == 'X') ? 'O' :'X'; 
+}
+    std::cout << " Play again? (y/n):";
+    std::cin >> again;
+  }
 }
 }
